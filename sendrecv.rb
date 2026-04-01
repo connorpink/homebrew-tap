@@ -5,23 +5,23 @@
 class Sendrecv < Formula
   desc "Repeat SSH-based file transfer between known devices"
   homepage "https://github.com/connorpink/quick_send_project"
-  version "0.2.2"
+  version "0.2.3"
   license "MIT"
 
   depends_on "rsync"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/connorpink/quick_send_project/releases/download/v0.2.2/sendrecv_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "322b29e3de78b9a57fcaa29fe85a92274d9361c1dcd5b5a7c20a5215a3372f91"
+      url "https://github.com/connorpink/quick_send_project/releases/download/v0.2.3/sendrecv_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "f045821992758672db81b0c574715f135b8c0a88f97040d42b77167545998168"
 
       define_method(:install) do
         bin.install "sendrecv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/connorpink/quick_send_project/releases/download/v0.2.2/sendrecv_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "e52277363b73def78cfdd3778ca9a80fe8ce4c23b93412fbaa8d0e0a3cb79394"
+      url "https://github.com/connorpink/quick_send_project/releases/download/v0.2.3/sendrecv_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "4e747a0bc2134279423d036b7c302092ff5510941ca0f529e97f87529ec98a85"
 
       define_method(:install) do
         bin.install "sendrecv"
@@ -31,15 +31,15 @@ class Sendrecv < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/connorpink/quick_send_project/releases/download/v0.2.2/sendrecv_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "b9369216f908a9950b5c613c5659d21f869dca156ad07a7cf47b9524415da4c9"
+      url "https://github.com/connorpink/quick_send_project/releases/download/v0.2.3/sendrecv_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "9b4cf4fd00c0f6867fbdb7d9bbcd33f4006f974dffb29d4fd8f5bb62dab43ebc"
       define_method(:install) do
         bin.install "sendrecv"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/connorpink/quick_send_project/releases/download/v0.2.2/sendrecv_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "a282e3363d60b85ee87db0f9dfeab4a59d75b21f0488725cbd6538aa21932b49"
+      url "https://github.com/connorpink/quick_send_project/releases/download/v0.2.3/sendrecv_Linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "c88034a3ee9ba57d747eb2c33cbc37b4a61899ff5bcd4cbc7b87a0c8310c0b74"
       define_method(:install) do
         bin.install "sendrecv"
       end
